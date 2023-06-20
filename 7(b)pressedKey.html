@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Code Display</title>
+  <script>
+    function displayKeyCode(event) {
+      const keyCode = event.keyCode || event.which;
+      alert("Key code: " + keyCode);
+    }
+  </script>
+</head>
+<body onkeydown="displayKeyCode(event)">
+  <h1>Key Code Display</h1>
+  <p>Press any key on the keyboard to display the key code.</p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>Button Example</h1>
+  <button id="myButton">Click Me</button>
+  <p id="myParagraph">Initial text.</p>
+
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      var paragraph = document.getElementById("myParagraph");
+      paragraph.classList.add("highlight");
+    });
+  </script>
+</body>
+</html>

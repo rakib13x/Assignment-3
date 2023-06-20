@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+</head>
+<body>
+  <h1>Button Example</h1>
+  <button id="myButton">Click Me</button>
+  <p id="myParagraph">Initial text.</p>
+
+  <script>
+    function handleButtonClick() {
+      document.getElementById("myParagraph").textContent = "Button Clicked!";
+    }
+
+    document.getElementById("myButton").addEventListener("click", handleButtonClick);
+  </script>
+</body>
+</html>

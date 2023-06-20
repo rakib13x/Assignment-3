@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX POST Request Example</title>
+  <script>
+    function sendPostRequest() {
+      var url = "https://api.example.com/submit";
+      var payload = {
+        name: "John Doe",
+        email: "johndoe@example.com"
+      };
+
+      var button = document.getElementById("requestButton");
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (response.ok) {
+          button.textContent = "Request Successful!";
+          button.disabled = true;
+          return response.json();
+        } else {
+          throw new Error("Request failed with status: " + response.status);
+        }
+      })
+      .then(data => {
+        console.log(data);
+        // Handle the response data here
+      })
+      .catch(error => {
+        console.error(error);
+        // Handle the error here
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>AJAX POST Request Example</h1>
+  <button id="requestButton" onclick="sendPostRequest()">Send POST Request</button>
+</body>
+</html>

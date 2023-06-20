@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Example</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    #myImage {
+      display: block;
+      margin: 0 auto;
+      max-width: 400px;
+      height: auto;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    var imageUrls = ["https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/id/870/200/300?grayscale&blur=2", "https://picsum.photos/id/237/200/300"]; // Array of image URLs
+    var counter = 0; // Counter variable to track the current image
+
+    function changeImage() {
+      var image = document.getElementById("myImage");
+      image.src = imageUrls[counter];
+      image.alt = "Image " + (counter + 1);
+
+      counter = (counter + 1) % imageUrls.length; // Update the counter for the next image
+    }
+  </script>
+</head>
+<body>
+  <h1>Image Example</h1>
+  <img id="myImage" src="https://picsum.photos/id/237/200/300" alt="Initial Image">
+
+  <button onclick="changeImage()">Change Image</button>
+
+</body>
+</html>

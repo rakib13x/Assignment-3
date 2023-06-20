@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day of the Week</title>
+  <script>
+    function getDayOfWeek(dateString) {
+      var date = new Date(dateString);
+      var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var dayOfWeek = daysOfWeek[date.getDay()];
+      return dayOfWeek;
+    }
+
+    function displayDayOfWeek() {
+      var inputDate = document.getElementById("dateInput").value;
+      var dayOfWeek = getDayOfWeek(inputDate);
+      document.getElementById("result").textContent = "Day of the Week: " + dayOfWeek;
+    }
+  </script>
+</head>
+<body>
+  <h1>Day of the Week</h1>
+  <label for="dateInput">Enter a date (YYYY-MM-DD):</label>
+  <input type="text" id="dateInput">
+  <button onclick="displayDayOfWeek()">Get Day of the Week</button>
+  <p id="result"></p>
+</body>
+</html>

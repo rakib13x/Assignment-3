@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paragraph Example</title>
+  <style>
+    .red {
+      color: black; /* Initial color */
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function toggleTextColor() {
+      var paragraphs = document.getElementsByClassName("red");
+
+      for (var i = 0; i < paragraphs.length; i++) {
+        var paragraph = paragraphs[i];
+
+        if (paragraph.classList.contains("highlight")) {
+          paragraph.classList.remove("highlight");
+        } else {
+          paragraph.classList.add("highlight");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Paragraph Example</h1>
+
+  <p class="red">This is paragraph 1.</p>
+  
+  <p class="red">This is paragraph 2.</p>
+  
+  <p id="id">This is a normal paragraph with id</p>
+  <p id="name">My name is Rakib</p>
+  
+  <p class="red">This is paragraph 3.</p>
+  
+  <button onclick="toggleTextColor()">Toggle Text Color</button>
+
+</body>
+</html>

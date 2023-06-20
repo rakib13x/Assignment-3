@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Root of Sum of Squares</title>
+  <script>
+    function calculateSquareRootOfSumOfSquares(numbers) {
+      var sumOfSquares = numbers.reduce(function(total, num) {
+        return total + Math.pow(num, 2);
+      }, 0);
+
+      var squareRoot = Math.sqrt(sumOfSquares);
+      return squareRoot;
+    }
+
+    function displaySquareRoot() {
+      var input = document.getElementById("numbersInput").value;
+      var numbers = input.split(",").map(function(num) {
+        return parseInt(num);
+      });
+
+      var result = calculateSquareRootOfSumOfSquares(numbers);
+      document.getElementById("result").textContent = "Square Root of Sum of Squares: " + result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Square Root of Sum of Squares</h1>
+  <label for="numbersInput">Enter numbers (comma-separated):</label>
+  <input type="text" id="numbersInput">
+  <button onclick="displaySquareRoot()">Calculate</button>
+  <p id="result"></p>
+</body>
+</html>

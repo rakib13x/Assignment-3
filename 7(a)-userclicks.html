@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Coordinates</title>
+  <script>
+    function displayCoordinates(event) {
+      const x = event.clientX;
+      const y = event.clientY;
+      alert("Clicked at coordinates: (" + x + ", " + y + ")");
+    }
+  </script>
+</head>
+<body onclick="displayCoordinates(event)">
+  <h1>Click Coordinates</h1>
+  <p>Click anywhere on the page to display the coordinates.</p>
+</body>
+</html>
